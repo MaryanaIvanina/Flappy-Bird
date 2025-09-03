@@ -1,16 +1,31 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;  
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static GameManager instance;
+
+    [SerializeField] private GameObject gameOverUI;
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        Time.timeScale = 1f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOver()
     {
-        
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
