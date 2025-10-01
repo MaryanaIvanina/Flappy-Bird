@@ -10,7 +10,8 @@ A simplified version of the original **Flappy Bird**, created in **Unity** as a 
 
 ## Features
 - Minimalist main menu  
-- Classic tap-to-fly mechanics  
+- Classic tap-to-fly mechanics
+- Points scoring system
 - Simple and intuitive UI  
 - Game Over screen with restart functionality  
 
@@ -19,18 +20,7 @@ A simplified version of the original **Flappy Bird**, created in **Unity** as a 
 - **C#** scripting  
 
 ## Platform
-- **Android** (APK build included in Releases)  
-
-## System Requirements
-### Minimum:
-- Android 7.0 (Nougat) or higher  
-- 2 GB RAM  
-- 50 MB free storage  
-
-### Recommended:
-- Android 10.0 or higher  
-- 3 GB RAM  
-- 100 MB free storage  
+- **Android** (APK build included in Releases)   
 
 ## Installation
 1. Download the latest `.apk` file from [Releases](../../releases).  
