@@ -1,6 +1,6 @@
 # Flappy Bird (Unity Mobile Clone)
 
-A simplified version of the original **Flappy Bird**, created in **Unity** as a mobile game.
+A clone of the original **Flappy Bird**, created in **Unity** as a mobile game.
 
 ## Gameplay
 - When the game starts, the player sees the **main menu** with the game title and a **Play** button.  
