@@ -1,11 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class FlyBehavior : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float jumpForce = 1.5f;
+    [SerializeField] private float jumpForce = 5f; 
     [SerializeField] private float gravityScale = 2f;
     [SerializeField] private float rotationSpeed = 5f;
 
@@ -20,30 +19,30 @@ public class FlyBehavior : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.Touch.Jump.performed += OnJump;
+        inputActions.Touch.Jump.started += OnJump;
         inputActions.Enable();
     }
 
     private void OnDisable()
     {
-        inputActions.Touch.Jump.performed -= OnJump;
+        inputActions.Touch.Jump.started -= OnJump;
         inputActions.Disable();
     }
 
     private void Start()
     {
         rb.gravityScale = gravityScale;
+        Application.targetFrameRate = 60;
     }
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 1f);
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private void Update()
     {
-        transform.rotation = Quaternion.Euler(0, 0, rb.linearVelocityY * rotationSpeed);
+        transform.rotation = Quaternion.Euler(0, 0, rb.linearVelocity.y * rotationSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
