@@ -5,7 +5,7 @@ A clone of the original **Flappy Bird**, created in **Unity** as a mobile game.
 ## Gameplay
 - When the game starts, the player sees the **main menu** with the game title and a **Play** button.  
 - Tapping **Play** launches the game.  
-- The player must **tap the screen** to make the bird fly and avoid obstacles.  
+- The player must **tap the screen** to make the bird fly, avoid obstacles and score points.  
 - If the bird hits a pipe or the ground, the game ends, and a **Game Over** screen with a **Restart** button is shown.  
 
 ## Features
